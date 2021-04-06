@@ -11,8 +11,8 @@ import java.util.List;
 public interface GoodsTypeDao {
 
 
-
     Integer updateGoodsTypeState(GoodsType parentGoodsType);
 
 
+    List<GoodsType> getAllGoodsTypeByParentId(Integer parentId);
 }

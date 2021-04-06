@@ -35,5 +35,16 @@
         WHERE goods_type_id = #{goodsTypeId}
     </update>
 
+    <select id="getAllGoodsTypeByParentId" resultMap="BaseResultMap">
+        SELECT
+            t_goods_type.goods_type_id,
+            t_goods_type.goods_type_name,
+            t_goods_type.p_id,
+            t_goods_type.goods_type_state
+        FROM
+            t_goods_type
+        WHERE
+            p_id = #{pId}
+    </select>
 
 </mapper>
